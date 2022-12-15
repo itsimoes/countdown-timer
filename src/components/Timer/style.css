@@ -18,13 +18,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
 
 .box {
-    background-color: var(--very-dark-blue);    
+    background-color: var(--very-dark-blue);
     height: 100vh;
     background-image: url(../../assets/images/pattern-hills.svg), url(../../assets/images/bg-stars.svg);
     background-position: bottom, top;
-    background-repeat: no-repeat, no-repeat;    
+    background-repeat: no-repeat, no-repeat;
     font-family: 'Red Hat Text', sans-serif;
     text-transform: uppercase;
+}
+@media screen and (max-width: 680px) {
+    .box{
+        background-position: bottom right, top;   
+    }
 }
 
 .container {
@@ -34,33 +39,54 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 /*--- Top Part ---*/
 .top-box {
     flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    color: var(--white);
+    letter-spacing: 10px;
+    font-size: 20px;
 }
 
-.content {  /* temporary class */
-    background-color: aliceblue;    
+
+@media screen and (max-width: 680px) {
+    .top-box{
+        letter-spacing: 10px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .top-box{
+        padding-left: 30px;
+        padding-right: 30px;
+        letter-spacing: 5px;
+        font-size: 18px;
+    }
+}
+
+
+.content {
+    /* temporary class */
+    background-color: aliceblue;
 }
 
 /*--- Central Part ---*/
 .central-box {
     display: flex;
     flex-grow: 1;
-    align-items: center;    
+    align-items: center;
 }
 
 .count-box {
     display: inline-block;
     background-color: var(--dark-desaturated-blue);
     color: var(--soft-red);
-    font-size: 60px; 
-    padding: 20px;   
+    font-size: 60px;
+    padding: 20px;
     min-width: 90px;
     border-radius: 7%;
     box-shadow: 0 10px var(--very-dark-mostly-black-blue);
@@ -69,19 +95,28 @@
 
 @media screen and (max-width: 680px) {
     .count-box {
-        font-size: 40px; 
-        padding: 15px;   
+        font-size: 40px;
+        padding: 15px;
         min-width: 55px;
         box-shadow: 0 7px var(--very-dark-mostly-black-blue);
         margin: 5px;
-    }    
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 375px) {
     .count-box {
-        font-size: 30px; 
-        padding: 10px;   
-        min-width: 40px;        
+        font-size: 30px;
+        padding: 15px;
+        min-width: 40px;
+        box-shadow: 0 5px var(--very-dark-mostly-black-blue);
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .count-box {
+        font-size: 30px;
+        padding: 10px;
+        min-width: 40px;
         box-shadow: 0 5px var(--very-dark-mostly-black-blue);
     }
 }
@@ -91,7 +126,7 @@
     font-weight: 100;
     letter-spacing: 4px;
     color: var(--grayish-blue);
-    padding: 10px;    
+    padding: 10px;
 }
 
 @media screen and (max-width: 680px) {
@@ -99,17 +134,25 @@
         font-size: 10px;
         font-weight: 100;
         letter-spacing: 4px;
-        padding: 10px;    
+        padding: 10px;
     }
 
 }
+@media screen and (max-width: 375px) {
+    .f-text {
+        font-size: 7px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        padding: 5px;
+    }
 
-@media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 370px) {
     .f-text {
         font-size: 5px;
         font-weight: 100;
         letter-spacing: 4px;
-        padding: 5px;    
+        padding: 5px;
     }
 
 }
@@ -120,6 +163,15 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    /* margin-bottom: 100px;
-    margin-top: 0; */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.icon:hover {    
+    fill: var(--soft-red);
 }
