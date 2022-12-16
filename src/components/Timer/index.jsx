@@ -37,17 +37,17 @@ const Timer = () => {
           renderer={renderer}
         />
         <div className='bottom-box'>
-          <a href="https://fb.com/itsimoes" _blank>
+          <a href="https://fb.com/itsimoes" target="_blank">
             <svg className="icon" >
               <FacebookIcon />
             </svg>
           </a>
-          <a href="https://pinterest.com/itsimoes" _blank>
+          <a href="https://pinterest.com/itsimoes" target="_blank">
             <svg className="icon" >
               <PinterestIcon />
             </svg>
           </a>
-          <a href="https://instagram.com/itsimoes" _blank>
+          <a href="https://instagram.com/itsimoes" target="_blank">
             <svg className="icon" >
               <InstagramIcon />
             </svg>
