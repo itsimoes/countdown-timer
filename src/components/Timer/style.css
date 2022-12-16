@@ -26,9 +26,10 @@
     font-family: 'Red Hat Text', sans-serif;
     text-transform: uppercase;
 }
+
 @media screen and (max-width: 680px) {
-    .box{
-        background-position: bottom right, top;   
+    .box {
+        background-position: bottom right, top;
     }
 }
 
@@ -54,13 +55,14 @@
 
 
 @media screen and (max-width: 680px) {
-    .top-box{
+    .top-box {
         letter-spacing: 10px;
         font-size: 15px;
     }
 }
+
 @media screen and (max-width: 375px) {
-    .top-box{
+    .top-box {
         padding-left: 30px;
         padding-right: 30px;
         letter-spacing: 5px;
@@ -93,6 +95,11 @@
     margin: 15px;
 }
 
+.count-box::after {
+    content: '';
+    width: 10px;
+}
+
 @media screen and (max-width: 680px) {
     .count-box {
         font-size: 40px;
@@ -112,6 +119,7 @@
         margin: 8px;
     }
 }
+
 @media screen and (max-width: 370px) {
     .count-box {
         font-size: 30px;
@@ -138,6 +146,7 @@
     }
 
 }
+
 @media screen and (max-width: 375px) {
     .f-text {
         font-size: 7px;
@@ -147,6 +156,7 @@
     }
 
 }
+
 @media screen and (max-width: 370px) {
     .f-text {
         font-size: 5px;
@@ -172,6 +182,6 @@
     padding-right: 15px;
 }
 
-.icon:hover {    
+.icon:hover {
     fill: var(--soft-red);
 }

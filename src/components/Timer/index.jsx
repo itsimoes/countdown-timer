@@ -9,7 +9,7 @@ import { ReactComponent as InstagramIcon } from '../../assets/images/icon-instag
 
 const Timer = () => {
 
-  const Completionist = () => <span>You are good to go!</span>;
+  const Completionist = () => <span className='f-text'>You are good to go!</span>;
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     console.log(days + " " + hours);
