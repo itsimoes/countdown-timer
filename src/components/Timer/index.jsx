@@ -19,10 +19,10 @@ const Timer = () => {
     } else {
       // Render a countdown
       return <div className='central-box'>
-        <div><span className='count-box'>{days}</span><div className='f-text'>days</div></div>
-        <div><span className='count-box'>{hours}</span><div className='f-text'>hours</div></div>
-        <div><span className='count-box'>{minutes}</span><div className='f-text'>minutes</div></div>
-        <div><span className='count-box'>{seconds}</span><div className='f-text'>seconds</div></div>
+        <div><div className='count-box clearfix' /*data-target={days}*/ ><div className='up'><span>{days}</span><div className='up2'></div></div><div className='down'><div className='down2'></div><span>{days}</span></div></div><div className='f-text'>days</div></div>
+        <div><div className='count-box'>{hours}</div><div className='f-text'>hours</div></div>
+        <div><div className='count-box'>{minutes}</div><div className='f-text'>minutes</div></div>
+        <div><div className='count-box'>{seconds}</div><div className='f-text'>seconds</div></div>
       </div>;
     }
   };
