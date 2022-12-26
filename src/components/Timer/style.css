@@ -70,12 +70,6 @@
     }
 }
 
-
-.content {
-    /* temporary class */
-    background-color: aliceblue;
-}
-
 /*--- Central Part ---*/
 .central-box {
     display: flex;
@@ -95,52 +89,74 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--dark-desaturated-blue);
+    background-color: var(--very-dark-mostly-black-blue);
     color: var(--soft-red);
     font-size: 60px;
-    /* padding: 20px; */
     height: 120px;
     min-width: 120px;
     border-radius: 7%;
     box-shadow: 0 10px var(--very-dark-mostly-black-blue);
     margin: 15px;
-    
     position: relative;
     perspective: 600px;
+    z-index: 2;
 }
 
-.count-box div {
-    
+
+.count-div {
     height: 50%;
     width: 100%;
     overflow: hidden;
     position: relative;
-
 }
 
 .count-box span {
-    
     position: absolute;
     left: 0;
     width: 100%;
     text-align: center;
 }
 
-.up {    
-    
-    border-radius: 10px 10px 0 0;    
+.up {
+
+    border-radius: 10px 10px 0 0;
     top: 0;
-    background-color: var(--dark-desaturated-blue);    
+    /* background-color: var(--dark-desaturated-blue);     */
+    background:
+        radial-gradient(circle at bottom left, transparent 5px, var(--dark-desaturated-blue) 0) bottom left,
+        radial-gradient(circle at bottom right, transparent 5px, var(--dark-desaturated-blue) 0) bottom right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
 }
-.up2 {    
+
+/* .up:hover {
+    transform:  translateY(60px) rotate3D(1, 0, 0, 180deg);
+
+    z-index: 3;
+
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+
+    
+} */
+
+
+.up2 {
     margin-top: 58px;
-    z-index: 10;    
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 10;
     height: 2px !important;
-    width: auto;
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1));;
+    width: auto !important;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+    ;
     opacity: 30%;
     /* position: absolute; */
 }
+
 .up span {
     padding: 16.5% 0 0 0;
     top: 0;
@@ -149,58 +165,113 @@
 .down {
     border-radius: 0 0 10px 10px;
     bottom: 0;
-    background-color: var(--dark-desaturated-blue);
+    background:
+        radial-gradient(circle at top left, transparent 5px, var(--dark-desaturated-blue) 0) top left,
+        radial-gradient(circle at top right, transparent 5px, var(--dark-desaturated-blue) 0) top right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 }
-.down2 {        
-    z-index: 10;    
-    height: 60px !important;
-    width: auto;
-    background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));;
+
+.down2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 10;
+    height: 2px !important;
+    width: auto !important;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    ;
     opacity: 30%;
     /* position: absolute; */
 }
+
+
 .down span {
     padding: 0 0 17.1% 0;
     bottom: 0;
 }
 
-/* -- concave borders -- */
-.border {
-    background:radial-gradient(circle at top left,transparent 30px,#32CBFF 0) top left,
-      radial-gradient(circle at top right,transparent 30px,#32CBFF 0) top right,
-      radial-gradient(circle at bottom left,transparent 30px,#32CBFF 0) bottom left,
-      radial-gradient(circle at bottom right,transparent 30px,#32CBFF 0) bottom right;
-  background-size:50% 50%;
-  background-repeat:no-repeat;
-}
-
-
 @media screen and (max-width: 680px) {
     .count-box {
-        font-size: 40px;
-        padding: 15px;
-        min-width: 55px;
+        font-size: 45px;
+        height: 90px;
+        min-width: 90px;
         box-shadow: 0 7px var(--very-dark-mostly-black-blue);
         margin: 5px;
     }
+
 }
 
 @media screen and (max-width: 375px) {
     .count-box {
-        font-size: 30px;
-        padding: 15px;
-        min-width: 40px;
+        font-size: 34px;
+        height: 70px;
+        min-width: 70px;
         box-shadow: 0 5px var(--very-dark-mostly-black-blue);
         margin: 8px;
+    }
+
+    .up {
+        border-radius: 5px 5px 0 0;
+        background:
+            radial-gradient(circle at bottom left, transparent 3px, var(--dark-desaturated-blue) 0) bottom left,
+            radial-gradient(circle at bottom right, transparent 3px, var(--dark-desaturated-blue) 0) bottom right;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .down {
+        border-radius: 0 0 5px 5px;
+        background:
+            radial-gradient(circle at top left, transparent 3px, var(--dark-desaturated-blue) 0) top left,
+            radial-gradient(circle at top right, transparent 3px, var(--dark-desaturated-blue) 0) top right;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .up span {
+        padding: 17% 0 0 0;
+        top: 0;
+    }
+
+    .down span {
+        padding: 0 0 18% 0;
     }
 }
 
 @media screen and (max-width: 370px) {
     .count-box {
-        font-size: 30px;
-        padding: 10px;
-        min-width: 40px;
+        font-size: 25px;
+        height: 55px;
+        min-width: 55px;
         box-shadow: 0 5px var(--very-dark-mostly-black-blue);
+        margin: 8px;
+    }
+
+    .up {
+        border-radius: 5px 5px 0 0;
+        background:
+            radial-gradient(circle at bottom left, transparent 3px, var(--dark-desaturated-blue) 0) bottom left,
+            radial-gradient(circle at bottom right, transparent 3px, var(--dark-desaturated-blue) 0) bottom right;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .down {
+        border-radius: 0 0 5px 5px;
+        background:
+            radial-gradient(circle at top left, transparent 3px, var(--dark-desaturated-blue) 0) top left,
+            radial-gradient(circle at top right, transparent 3px, var(--dark-desaturated-blue) 0) top right;
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .up span {
+        padding: 20% 0 0 0;
+        top: 0;
+    }
+
+    .down span {
+        padding: 0 0 19% 0;
     }
 }
 
@@ -255,8 +326,17 @@
     height: 24px;
     padding-left: 15px;
     padding-right: 15px;
+
 }
 
-.icon:hover {
-    fill: var(--soft-red);
+.icon path {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
+
+.icon:hover path {
+    fill: var(--soft-red);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
