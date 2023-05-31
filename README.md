@@ -1,4 +1,4 @@
-# Countdown timer
+# Countdown timer [Em Construção...]
 
 - Este é um projeto pessoal desenvolvido utilizando ReactJS com base em um desafio chamado [Launch countdown timer](https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-) do site [Frontend Mentor](https://www.frontendmentor.io) com intuito de aplicar conhecimentos sobre utilização da biblioteca [React-countdown](https://www.npmjs.com/package/react-countdown) para a criação de contadores de tempo, além de conhecimentos sobre animações CSS.
 
